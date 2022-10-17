@@ -1095,7 +1095,7 @@ p{
         flex-direction: column;
         align-items: center;
         overflow: hidden;
-        transition: transform .2s ease;
+        transition: transform .1s ease;
     }
 
     .header--closed{
@@ -1181,6 +1181,10 @@ p{
         width: 320px;
     }
 
+    .plan .item-not-included{
+        display: none;
+    }
+
     .apps{
         width: 500px;
         justify-content: center;
@@ -1221,7 +1225,7 @@ p{
         align-items: center;
         overflow: hidden;
         position: relative;
-        transition: transform .2s ease;
+        transition: transform .1s ease;
     }
 
     .header--closed{
@@ -1324,6 +1328,10 @@ p{
 
     .feature{
         width: 220px;
+    }
+
+    .plan .item-not-included{
+        display: none;
     }
 
     .apps{
