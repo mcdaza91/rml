@@ -409,8 +409,8 @@ ul h5{
 }
 
 .plan .item-not-included{
-    text-decoration: line-through;
-    color: var(--gray-tertiary);
+    text-decoration: none;
+    color: transparent;
 }
 
 .plan .plan-header{
