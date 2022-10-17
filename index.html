@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script defer src="anim.js"></script>
 </head>
 <body>
     <header class="header">
@@ -55,7 +54,7 @@
                     <p>Reach My Leads instantly converts all incoming web leads into live phone calls.</p>
                 </div>
                 <div class="steps">
-                    <div class="step">
+                    <div class="step first">
                         <div class="step-copy">
                             <h4>1. A lead completes and submits one of your online forms</h4>
                             <p>Reach My Leads can receive data from any source. Connect your CRM, website forms, Facebook campaigns, landing pages, and more.</p>
@@ -64,7 +63,7 @@
                             <img class="img" src="img/illustration-1@3x.png" alt="">
                         </div>
                     </div>
-                    <div class="step b">
+                    <div class="step b second">
                         <div class="step-copy">
                             <h4>2. Reach My Leads generates a call to your sales team</h4>
                             <p>Once the lead is submitted Reach My Leads will automatically trigger a call to your business in seconds. If they don't pick up, we can try them again or try a different number with our Round Robin Routing feature.</p>
@@ -73,10 +72,10 @@
                             <img class="img" src="img/illustration-2@3x.png" alt="">
                         </div>
                     </div>
-                    <div class="step">
+                    <div class="step third">
                         <div class="step-copy">
                             <h4>3. Press 1! Your sales rep and lead are now connected</h4>
-                            <p>Reach My Leads plays a custom recording with the lead's info and prompts you to press 1 to connect. Your hot new lead instantly gets a call from your business number before they can change their mind.</p>
+                            <p>Reach My Leads plays a custom recording with the leads' info and prompts you to press 1 to connect. Your hot new lead instantly gets a call from your business number before they can change their mind.</p>
                         </div>
                         <div class="illustration">
                             <img class="img" src="img/illustration-3@3x.png" alt="">
@@ -142,20 +141,54 @@
                 </div>
             </div>           
         </section>
+        <section id="benefits">
+            <div class="section-title">
+                <p class="eyebrow">benefits</p>
+                <h3> Fill the gap between Marketing and Sales. Optimize your speed to lead and covert those leads into business opportunities.</h3>
+            </div>
+            <div class="benefits">
+                <div class="benefits-l">
+                    <div class="benefit">
+                        <h4>Give your marketing dollars a chance</h4>
+                        <p>Every minute your sales team waits means money in the trash. Rest assure every lead will receive a call at the peak of their interest.</p>
+                    </div>
+                    <div class="benefit">
+                        <h4>Outpace your competition</h4>
+                        <p>Lead response time is the difference between closing a deal of finishing second.</p>
+                    </div>
+                </div>
+                <div class="benefits-image">
+                    <img src="img/logo Middle@3x.png" alt="logo-reachmyleads" class="img">  
+                </div>
+                <div class="benefits-r">
+                    <div class="benefit">
+                        <h4>Happy team - we all win!</h4>
+                        <p>Take the pressure away from your sales team and let them focus on closing more deals.</p>
+                    </div>
+                    <div class="benefit">
+                        <h4>The power of 1 or more</h4>
+                        <p>Imagine what 1 more qualified buyer a day would mean to your bottom line.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cenefa">
+                <img src="img/cenefa@3x.png" alt="" class="cenefa">
+            </div>
+        </section>
         <section id="plans">
             <div class="container">
                 <h2>Plans & Pricing</h2>
                 <div class="plans">
-                    <div class="plan starter">
+                    <div class="plan starter" id="starter">
                         <div class="plan-header">
-                            <h4 class="plan-name">Starter</h4>
-                            <h2 class="price">149</h2>
-                            <h5 class="billing">usd billed monthly</h5>
+                            <h4 id="plan-name">Starter</h4>
+                            <h2 id="price">149</h2>
+                            <h5 id="billing">usd billed monthly</h5>
                         </div>
                         <ul class="plan-contents">
+                            <li class="item-included">1 lead Form</li>
+                            <li class="item-included">50 lead Limit</li>
                             <li class="item-included">Unlimited conversion calls</li>
-                            <li class="item-included">1 Lead Form</li>
-                            <li class="item-included">50 Lead Limit</li>
                             <li class="item-not-included">Custom Office Hours</li>
                             <li class="item-not-included">Round Robin</li>
                             <li class="item-not-included">Call Recording</li>
@@ -163,16 +196,16 @@
                         </ul>
                         <button class="btn-primary">Sign Up Now</button>
                     </div>
-                    <div class="plan professional">
+                    <div class="plan professional" id="professional">
                         <div class="plan-header">
-                            <h4 class="plan-name">Professional</h4>
-                            <h2 class="price">199</h2>
-                            <h5 class="billing">usd billed monthly</h5>
+                            <h4 id="plan-name">Professional</h4>
+                            <h2 id="price">199</h2>
+                            <h5 id="billing">usd billed monthly</h5>
                         </div>
                         <ul class="plan-contents">
-                            <li class="item-included">Unlimited conversion calls</li>
                             <li class="item-included">3 Lead Forms</li>
-                            <li class="item-included">100 Lead Limit</li>
+                            <li class="item-included">100 lead Limit</li>
+                            <li class="item-included">Unlimited conversion calls</li>
                             <li class="item-included">Custom Office Hours</li>
                             <li class="item-included">Round Robin</li>
                             <li class="item-not-included">Call Recording</li>
@@ -180,17 +213,17 @@
                         </ul>
                         <button class="btn-primary">Sign Up Now</button>
                     </div>
-                    <div class="plan business">
+                    <div class="plan business" id="business">
                         <div class="plan-header">
-                            <h4 class="plan-name">Business</h4>
-                            <h2 class="price">399</h2>
-                            <h5 class="billing">usd billed monthly</h5>
+                            <h4 id="plan-name">Business</h4>
+                            <h2 id="price">399</h2>
+                            <h5 id="billing">usd billed monthly</h5>
                         </div>
                         <ul class="plan-contents">   
-                            <h5>RECOMMENDED</h5>   
+                            <h5>RECOMMENDED</h5>                
+                            <li class="item-included">5 lead Form</li>
+                            <li class="item-included">250 lead Limit</li>
                             <li class="item-included">Unlimited conversion calls</li>
-                            <li class="item-included">5 Lead Forms</li>
-                            <li class="item-included">250 Lead Limit</li>
                             <li class="item-included">Custom Office Hours</li>
                             <li class="item-included">Round Robin</li>
                             <li class="item-included">Call Recording</li>
@@ -198,16 +231,16 @@
                         </ul>
                         <button class="btn-primary">Sign Up Now</button>
                     </div>
-                    <div class="plan enterprise">
+                    <div class="plan enterprise" id="enterprise">
                         <div class="plan-header">
-                            <h4 class="plan-name">Starter</h4>
-                            <h2 class="price">899</h2>
-                            <h5 class="billing">usd billed monthly</h5>
+                            <h4 id="plan-name">Enterprise</h4>
+                            <h2 id="price">899</h2>
+                            <h5 id="billing">usd billed monthly</h5>
                         </div>
                         <ul class="plan-contents">
+                            <li class="item-included">10 lead Form</li>
+                            <li class="item-included">600 lead Limit</li>
                             <li class="item-included">Unlimited conversion calls</li>
-                            <li class="item-included">Unlimited Lead Forms</li>
-                            <li class="item-included">600 Lead Limit</li>
                             <li class="item-included">Custom Office Hours</li>
                             <li class="item-included">Round Robin</li>
                             <li class="item-included">Call Recording</li>
@@ -285,7 +318,7 @@
                                 <textarea name="message" id="message" cols="37" rows="8"></textarea>
                             </div>
                         </div>
-                        <button form="contact-form" type="submit" formaction="contactform.php" class="btn-primary">Submit</button> 
+                        <button form="contact-form" type="submit" formaction="/" class="btn-primary">Submit</button> 
                     </form>
                     </div>
                 </div>
@@ -298,5 +331,17 @@
         <img src="img/Logo-white@3x.png" alt="" class="img">
     </div>
 </footer>
+<script>
+    const header = document.querySelector(".header");
+    let lastScrollY = window.scrollY;
+    window.addEventListener("scroll", () => {
+        if(lastScrollY < window.scrollY){
+            header.classList.add("header--closed");
+        } else{
+            header.classList.remove("header--closed");
+        }
+        lastScrollY = window.scrollY;
+    });
+</script>
 </body>
 </html>

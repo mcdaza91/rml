@@ -11,6 +11,7 @@ body{
     padding: 0;
     font-family: var(--body-font);
     font-size: 16px;
+    background-color: var(--bg-blue);
 }
 
 .wrapper{
@@ -98,6 +99,7 @@ button{
 }
 
 .header{
+    height: var(--nav-height);
     padding: 0 64px;
     display: flex;
     align-items: center;
@@ -105,6 +107,8 @@ button{
     position: sticky;
     top: 0px;
     background-color: white;
+    transition: all .3 ease;
+    box-shadow: 0px 4px 4px rgba(66, 83, 101, 0.03);
 }
 
 .header .cta{
@@ -304,11 +308,20 @@ button{
 }
 
 #benefits{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 32px;
     background-color: var(--purple-secondary);
     color: white;
     overflow: hidden;
-    margin: 0px 40px;
+    margin: 80px 40px;
+    padding-top: 64px;
+}
+
+#benefits .section-title{
+    padding: 0% 10%;
 }
 
 .benefits{
@@ -316,11 +329,9 @@ button{
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    gap: 64px;
-}
-
-#benefits .intro{
-    text-align: center;
+    gap: 32px;
+    margin-top: 104px;
+    margin-bottom: 104px;
 }
 
 .benefits-l{
@@ -344,7 +355,7 @@ button{
 }
 
 .benefits .img{
-    width: 360px;
+    width: 300px;
 }
 
 #benefits .cenefa{
@@ -409,7 +420,6 @@ ul h5{
 }
 
 .plan .item-not-included{
-    text-decoration: none;
     color: transparent;
 }
 
@@ -453,6 +463,7 @@ ul h5{
 
 #contact{
     overflow: hidden;
+    background-color: white;
 }
 
 .contact-contents{
@@ -535,6 +546,7 @@ footer .container{
 footer .img{
     height: 50px;
     margin: 0;
+    
 }
 
 /* --------- Fonts --------- */
@@ -753,9 +765,10 @@ p{
     --eyebrow-size: 15px;
     --eyebrow-lineheight: 24px;
     --eyebrow-spacing: 8px;
-    --eyebrow-font-weight: 800;
+    --eyebrow-font-weight: 800px;
 
-
+    --nav-height: 80px;
+    --nav-height-closed: 110px;
 }
 
 /* ------------------------ RESPONSIVE ------------------------ */
@@ -778,6 +791,15 @@ p{
         transition: all 0.5s ease;
         pointer-events: none;
         overflow: hidden;
+    }
+
+    .benefits{
+        flex-direction: column;
+    }
+
+    .benefits-l, .benefits-r{
+        text-align: left;
+        gap: 24px;
     }
 }
 
@@ -823,15 +845,18 @@ p{
         width: 320px;
     }
 
+    .benefits-l, .benefits-r{
+        width: 280px;
+    }
+    
+    .benefits .img{
+        width: 220px;
+    }
+
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 900px) {
 
-
-
-    .container{
-        margin: 0 13%;
-    }
 
     .hero-contents{
         padding-top:80px;
@@ -859,6 +884,16 @@ p{
 
     .integrations .img{
         height: 50px;
+    }
+
+    .benefits-l, .benefits-r{
+        flex-direction: row;
+        width: 664px;
+        gap: 24px;
+    }
+    
+    .benefits .img{
+        width: 280px;
     }
 
     .plan{
@@ -932,6 +967,12 @@ p{
         flex-direction: column;
     }
 
+    .benefits-l, .benefits-r{
+        width: 500px;
+        flex-direction: column;
+        gap: 24px;
+    }
+
     .feature{
         width: 500px;
         flex-direction: row;
@@ -955,15 +996,9 @@ p{
         width: 500px;
         text-align: center;
     }
-
-
-
-    
 }
 
 @media only screen and (max-width: 779px) and (min-width:600px) {
-
-    
 
     .hero-contents{
         padding-top:80px;
@@ -1045,18 +1080,26 @@ p{
         text-align: center;
     }
 
+    .benefits-l, .benefits-r{
+        width: 400px;
+    }
+
 }
 
 @media only screen and (max-width: 599px) and (min-width:480px) {
 
     .header{
+        height: var(--nav-height-closed);
         padding: 10px 64px 10px 64px;
         display: flex;
         flex-direction: column;
         align-items: center;
         overflow: hidden;
-        border: white;
-        position: relative;
+        transition: transform .2s ease;
+    }
+
+    .header--closed{
+        transform: translateY(calc(-2 *var(--nav-height-closed)));
     }
 
     .header .cta {
@@ -1162,16 +1205,27 @@ p{
         text-align: center;
     }
 
+    .benefits-l, .benefits-r{
+        width: 300px;
+    }
+
 }
 
 @media only screen and (max-width: 479px) and (min-width:320px) {
 
     .header{
+        height: var(--nav-height-closed);
         padding: 16px;
         display: flex;
         flex-direction: column;
         align-items: center;
         overflow: hidden;
+        position: relative;
+        transition: transform .2s ease;
+    }
+
+    .header--closed{
+    transform: translateY(calc(-2 *var(--nav-height-closed)));
     }
 
     .header .cta {
@@ -1236,7 +1290,6 @@ p{
         font-size: 24px;
     }
 
-
     .steps{
         width: 280px;
         gap: 64px;
@@ -1300,6 +1353,15 @@ p{
     #contact .img{
         height: 64px;
     }
+
+    .benefits-l, .benefits-r{
+        width: 200px;
+    }
+
+    .benefits .img{
+        width: 200px;
+    }
+
 
 
 }
